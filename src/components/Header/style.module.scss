@@ -1,0 +1,121 @@
+.header {
+  display: flex;
+  text-align: center;
+  color: #fff;
+  margin: 1rem 0rem;
+}
+
+.brand {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand_logo {
+  width: 400px;
+}
+
+.brand_info {
+  text-align: left;
+  width: 44%;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.navigation {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(65, 65, 65);
+  height: 100px;
+}
+
+.button {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  width: 7rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.menu li {
+  display: flex;
+  font-size: 18px;
+  color: #fff;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  &:hover{
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+  }
+}
+
+
+.menu .login {
+  background-color: rgb(255, 196, 0);
+  color: #0F182E;
+}
+  
+  /* END HEADER */
+  
+  /* SUB MENU - SEARCH MOVIE FORM */
+  
+.submenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submenu_items {
+  width: 100%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.submenu li {
+  display: inline-block;
+  padding: 1.9rem;
+  font-size: 15px;
+  color: #fff;
+}
+
+ /*HEADER IMAGE - HEADER MENU - LOGIN */
+
+  .form_search {
+    padding: 1.9rem;
+  }
+  
+  .search_movie {
+    padding: 0.6rem;
+    border: 1px solid #fff;
+    text-align: left;
+    width: 210px;
+  }
+    
+  .search_input {
+    background: #080f21;
+    opacity: 1;
+    border: 0;
+  
+    color: #fff;
+  }
+  
+  .search_movie > button {
+    display: inline;
+    background-color: #080f21;
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+  }

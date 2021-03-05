@@ -1,0 +1,34 @@
+.view_movies {
+  flex: 1;
+}
+
+.details_movies {
+  width: 80%;
+}
+
+.title_list {
+  display: flex;
+  padding: 2rem 1rem;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 25px;
+}
+
+.details {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgb(255, 196, 0);
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.list_movies {
+  display: flex;
+}
+

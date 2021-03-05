@@ -1,16 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router,  Route } from 'react-router-dom';
-
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //Components
-import MoviesLayout from './components/MoviesLayout'
+import Layout from "./containers/Layout/Layout";
+import Home from "./containers/Home/Home";
+import MovieDetails from './components/Movies/MovieDetails/MovieDetails'
+import "./styles/index2.css"
 
 function App() {
   return (
-    <Router>
-      <Route exact path='/'>
-        <MoviesLayout/>
-      </Route>
-    </Router>
+      <Switch>
+        <Layout>
+          <Route exact path="/" component={Home} />
+          <Route path={"/movie_details"} component={MovieDetails} />
+        </Layout>
+      </Switch>
   );
 }
 
