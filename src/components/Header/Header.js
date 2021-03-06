@@ -1,14 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import logo from "../../assets/movie_7.png"
-import style from './style.module.scss'
+import style from "./style.module.scss";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className={style.header}>
       <div className={style.brand}>
-        <img className={style.brand_logo} src={logo} alt="" />
+        <img className={style.brand_logo} src={"/images/movie_7.png"} alt="" />
         <div className={style.brand_info}>
           <b>Discover</b> what's in theaters, the latest trailers, the best new
           and more..
@@ -17,31 +17,37 @@ const Header = () => {
       <div className={style.navigation}>
         <ul className={style.menu}>
           <li>
-            <p className={style.button}>DISCOVER</p>
+            <Link
+              to={{ pathname: "/" }}
+              style={{ textDecoration: "none", color: "#fff" }}
+            >
+              <p className={style.button}>DISCOVER</p>
+            </Link>
           </li>
           <li>
-            <p className={style.button}>MOVIES</p>
+            <Link
+              to={{ pathname: "/movies", state: {type: "movie"} }}
+              style={{ textDecoration: "none", color: "#fff" }}
+            >
+              <p className={style.button}>MOVIES</p>
+            </Link>
           </li>
           <li>
-            <p className={style.button}>SERIES</p>
-          </li>
-          <li>
-            <p className={style.button}>TV SHOWS</p>
+            <Link
+              to={{ pathname: "/movies", state: {type: "tv"} }}
+              style={{ textDecoration: "none", color: "#fff" }}
+            >
+              <p className={style.button}>SERIES</p>
+            </Link>
           </li>
           <li>
             <p className={style.button}>SIGN UP</p>
           </li>
           <li>
-            <p className={[style.button, style.login].join(' ')}>LOGIN</p>
+            <p className={[style.button, style.login].join(" ")}>LOGIN</p>
           </li>
         </ul>
         <div className={style.submenu}>
-          <ul className={style.submenu_items}>
-            <li>Top News</li>
-            <li>Movie News</li>
-            <li>TV News</li>
-            <li>Latest Trailers</li>
-          </ul>
           <form className={style.form_search}>
             <div className={style.search_movie}>
               <input
@@ -50,9 +56,9 @@ const Header = () => {
                 type="text"
                 name="name"
               />
-              <button>
+              <div>
                 <FontAwesomeIcon icon={faSearch} size="lg" />
-              </button>
+              </div>
             </div>
           </form>
         </div>

@@ -2,7 +2,6 @@
   display: flex;
   text-align: center;
   color: #fff;
-  margin: 1rem 0rem;
 }
 
 .brand {
@@ -15,6 +14,7 @@
 
 .brand_logo {
   width: 400px;
+  height: 37%;
 }
 
 .brand_info {
@@ -55,25 +55,23 @@
   height: 100%;
   text-align: center;
   align-items: center;
-  &:hover{
+  &:hover {
     border-bottom: 1px solid #fff;
     cursor: pointer;
+  }  &:active {
+    border-bottom: 1px solid #fff;
   }
-}
 
+}
 
 .menu .login {
   background-color: rgb(255, 196, 0);
-  color: #0F182E;
+  color: #0f182e;
 }
-  
-  /* END HEADER */
-  
-  /* SUB MENU - SEARCH MOVIE FORM */
-  
+
 .submenu {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -91,31 +89,30 @@
   color: #fff;
 }
 
- /*HEADER IMAGE - HEADER MENU - LOGIN */
+.form_search {
+  padding: 1.9rem;
+}
 
-  .form_search {
-    padding: 1.9rem;
-  }
-  
-  .search_movie {
-    padding: 0.6rem;
-    border: 1px solid #fff;
-    text-align: left;
-    width: 210px;
-  }
-    
-  .search_input {
-    background: #080f21;
-    opacity: 1;
-    border: 0;
-  
-    color: #fff;
-  }
-  
-  .search_movie > button {
-    display: inline;
-    background-color: #080f21;
-    color: rgb(255, 255, 255);
-    border: none;
-    outline: none;
-  }
+.search_movie {
+  padding: 0.6rem;
+  border: 1px solid #fff;
+  text-align: left;
+  width: 250px;
+  display: flex;
+}
+
+.search_input {
+  background: #080f21;
+  opacity: 1;
+  border: 0;
+  width: 90%;
+  color: #fff;
+}
+
+.search_movie > button {
+  display: inline;
+  background-color: #080f21;
+  color: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+}
