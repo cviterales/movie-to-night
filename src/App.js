@@ -1,19 +1,35 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { lazy, Suspense } from "react";
+import { Route, Switch } from "react-router-dom";
 //Components
 import Layout from "./containers/Layout/Layout";
 import Home from "./containers/Home/Home";
-import MovieDetails from './components/Movies/MovieDetails/MovieDetails'
-import "./styles/index2.css"
+import Spinner from "./components/Spinner/Spinner";
+import "./styles/index.scss";
+
+const MovieDetails = lazy(() =>
+  import("./components/Movies/MovieDetails/MovieDetails")
+);
+const MoviesGrid = lazy(() =>
+  import("./components/Movies/GridMovies/GridMovies")
+);
 
 function App() {
   return (
+    <Suspense
+      fallback={
+        <div style={{ position: "absolute", left: "50%", top: "50%" }}>
+          <Spinner />
+        </div>
+      }
+    >
       <Switch>
         <Layout>
           <Route exact path="/" component={Home} />
           <Route path={"/movie_details"} component={MovieDetails} />
+          <Route path={"/movies"} component={MoviesGrid} />
         </Layout>
       </Switch>
+    </Suspense>
   );
 }
 
