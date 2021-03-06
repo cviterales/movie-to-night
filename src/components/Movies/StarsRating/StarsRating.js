@@ -35,6 +35,7 @@ const StarsRating = ({ rating }) => {
   return (
     <div className={styles.wrapper_stars} key={Math.random()}>
       {starsArr}
+      <b>{rating.toFixed(1)}</b>
     </div>
   );
 };

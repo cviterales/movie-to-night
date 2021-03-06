@@ -1,0 +1,9 @@
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 0.5rem;
+}
+.movie {
+  width: 100%;
+}

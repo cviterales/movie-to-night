@@ -18,8 +18,9 @@ const Home = () => {
 
   return (
     <div className={style.content_movies}>
+      <h1>{""}</h1>
       <Movies movies={movies} />
-      <BestMovie />
+      <BestMovie movies={movies}/>
     </div>
   );
 };

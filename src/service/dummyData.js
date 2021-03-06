@@ -721,6 +721,6 @@ export const getData = (e) => {
     case "tv":
       return tv;
     default:
-      break;
+      return movie;
   }
 };

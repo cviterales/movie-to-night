@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  background-color: #080f21;
+  max-width: 1900px;
+  width: 90vw;
+  font-family: "Roboto", "Roboto Bold";
+  margin: 0 auto;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgb(255, 196, 0);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background:rgb(255, 196, 0);
+  }
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local('Roboto'), url(./fonts/Roboto-Regular.ttf) format('truetype');
+  font-display: fallback;
+}
+
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: local('Roboto-Bold'), url(./fonts/Roboto-Bold.ttf) format('truetype');
+  font-display: fallback;
+}

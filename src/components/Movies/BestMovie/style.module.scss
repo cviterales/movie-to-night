@@ -10,7 +10,7 @@
 .description {
   position: absolute;
   background: black;
-  width: 430px;
+  width: 55%;
   bottom: 1rem;
   right: 0;
   opacity: 0.7;
@@ -36,9 +36,10 @@
   cursor: pointer;
 }
 
-.title_movie > p {
-  text-align: left;
-  padding-left: 1rem;
+.info_movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .best_title {
@@ -47,11 +48,11 @@
 }
 
 .best_description {
-  padding: 0.4rem 0rem;
+  margin: 0.5rem;
 }
 
 .best_more {
-  color:rgb(255, 196, 0);
+  color: rgb(255, 196, 0);
 }
 
 .best_movie-img {
@@ -67,5 +68,3 @@
   width: 100%;
   height: 100%;
 }
-
-
