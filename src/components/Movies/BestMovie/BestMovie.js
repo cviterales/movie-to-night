@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import style from "./style.module.scss";
 import StarsRating from "../StarsRating/StarsRating";
 import { Link } from "react-router-dom";
-import Spinner from "../../Spinner/Spinner";
 
 const BestMovie = ({ movies }) => {
   let index = -1;
@@ -43,7 +42,7 @@ const BestMovie = ({ movies }) => {
               </div>
             </div>
           ) : (
-            <Spinner width="50px" height="50px" />
+            null
           )}
           <picture>
             <img

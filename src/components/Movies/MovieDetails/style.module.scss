@@ -41,6 +41,10 @@
   justify-content: center;
   align-items: center;
   width: 50%;
+  animation: fadeImage 2s forwards;
+  -webkit-animation: fadeImage 2s forwards;
+  -o-animation: fadeImage 2s forwards;
+  -moz-animation: fadeImage 2s forwards;
 }
 
 
@@ -92,4 +96,14 @@
 
 .details > p {
   margin: 1rem 0rem;
+}
+
+
+@keyframes fadeImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

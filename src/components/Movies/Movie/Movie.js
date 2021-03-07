@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import Spinner from "../../Spinner/Spinner";
+import React from "react";
 import StarsRating from "../StarsRating/StarsRating";
 import style from "./style.module.scss";
 
 const Movie = (props) => {
-  const [loaded, setLoaded] = useState(false);
   return (
     <>
       <div key={props.keyIndex} className={style.movie}>
@@ -12,11 +10,8 @@ const Movie = (props) => {
           className={style.movie_img}
           src={props.poster}
           alt=""
-          onLoad={() => {
-            setLoaded(true);
-          }}
         />
-        {loaded && (
+     {/*    {loaded && ( */}
           <>
             {props.stars ? (
               <>
@@ -28,9 +23,9 @@ const Movie = (props) => {
               </>
             ) : null}
           </>
-        )}
+{/*         )} */}
       </div>
-      {!loaded && <Spinner width="50px" height="50px" />}
+{/*       {!loaded && <Spinner width="50px" height="50px" />} */}
     </>
   );
 };

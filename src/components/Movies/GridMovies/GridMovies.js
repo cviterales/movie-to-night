@@ -20,7 +20,8 @@ const GridMovies = (props) => {
   }, [type]);
 
   const renderMovies = (movies) => {
-    return movies.map((movie, index) => {
+    return movies.map((movie) => {
+      let index = Math.floor(Math.random() * 2000);
       return (
         <div className={style.movie} key={index}>
           <Link
