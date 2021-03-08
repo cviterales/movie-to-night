@@ -4,7 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import style from "./style.module.scss";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className={style.header}>
       <div className={style.brand}>

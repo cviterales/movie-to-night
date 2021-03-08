@@ -6,26 +6,25 @@ const Movie = (props) => {
   return (
     <>
       <div key={props.keyIndex} className={style.movie}>
-        <img
-          className={style.movie_img}
-          src={props.poster}
-          alt=""
-        />
-     {/*    {loaded && ( */}
+        <img className={style.movie_img} src={props.poster} alt="" />
+        {props.hover_stars ? (
           <>
-            {props.stars ? (
-              <>
-                {" "}
-                <p>{props.title}.</p>
-                <div className={style.rating}>
-                  <StarsRating rating={props.imdbRating} />
-                </div>{" "}
-              </>
-            ) : null}
+            <div className={style.description}></div>
+            <div className={style.info_movie}>
+              <StarsRating rating={props.imdbRating} />
+            </div>
           </>
-{/*         )} */}
+        ) : null}
+        {props.stars ? (
+          <>
+            {" "}
+            <p>{props.title}.</p>
+            <div className={style.rating}>
+              <StarsRating rating={props.imdbRating} />
+            </div>{" "}
+          </>
+        ) : null}
       </div>
-{/*       {!loaded && <Spinner width="50px" height="50px" />} */}
     </>
   );
 };

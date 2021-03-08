@@ -6,11 +6,14 @@ import moment from "moment";
 
 
 const MovieDetails = (props) => {
-  const [movie] = useState(props.location.state.movie);
+  const [movie] = useState(props.location.state ? props.location.state.movie : null);
   const [loaded, setLoaded] = useState(false);
 
-  return (
-    <div className={style.content_details}>
+  let renderDetails = <div style={{fontSize: "20px", color: "#fff", position: "absolute", left: "50%", top: "50%"}}>OH! An error ocurred!</div>
+
+  if (movie) {
+    renderDetails = (
+      <div className={style.content_details}>
       <div className={style.content_image_details}>
         {loaded && (
           <>
@@ -75,6 +78,10 @@ const MovieDetails = (props) => {
       </div>
       {loaded && <div className={style.content_movie_details}></div>}
     </div>
+    )
+  }
+  return (
+    <div>{renderDetails}</div>
   );
 };
 

@@ -18,7 +18,8 @@ const Movies = (props) => {
                 poster={`https://image.tmdb.org/t/p/w220_and_h330_face${movie.poster_path}`}
                 title={movie.title}
                 imdbRating={movie.vote_average}
-                stars={true}
+                stars={true}  
+                hover_stars={false}            
               />
             </Link>
           </li>
