@@ -33,7 +33,7 @@ const Header = (props) => {
       );
     });
   };
-  //const isCurrent = window.location.pathname === item.path;
+
   return (
     <header className={style.header}>
       <div className={style.brand}>

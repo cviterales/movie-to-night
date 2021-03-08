@@ -11,30 +11,12 @@
   margin-top: 1rem;
 }
 
-.footer_submenu {
-  margin: 1rem 0rem;
-}
-
-.footer_submenu_items {
-  display: flex;
-  text-align: center;
-  justify-content: flex-end;
-  width: 100%;
-
-}
-
-.footer_submenu li {
-  display: inline-block;
-  margin: 1rem 1.5rem;
-  font-size: 15px;
-  color: #fff;
-}
-
 .submenu_social {
   display: flex;
   color: #fff;
   justify-content: center;
   align-items: center;
+  margin: 1rem 0rem;
 }
 
 .submenu_social > a{

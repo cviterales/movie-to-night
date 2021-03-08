@@ -48,11 +48,7 @@ const MovieDetails = (props) => {
                     <p>Amount Votes: {movie.vote_count}</p>
                   </div>
                   <div
-                    style={{
-                      fontSize: "18px",
-                      fontFamily: "Roboto",
-                      margin: "1rem 0rem",
-                    }}
+                    className={style.content_description}
                   >
                     <p>{movie.overview}</p>
                   </div>

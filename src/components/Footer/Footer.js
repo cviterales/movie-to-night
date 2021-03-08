@@ -12,7 +12,6 @@ const Footer = () => {
   return (
     <footer className={style.footer}>
       <div className={style.border}></div>
-      <div className={style.footer_submenu}>
         <div className={style.submenu_social}>
           <a href="https://www.linkedin.com/in/cristian-viterales" target="_blank"  aria-label="LinkedIn" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedin} size="lg" />
@@ -24,7 +23,6 @@ const Footer = () => {
             <FontAwesomeIcon icon={faEnvelope} size="lg" />
           </a>
         </div>
-      </div>
     </footer>
   );
 };
