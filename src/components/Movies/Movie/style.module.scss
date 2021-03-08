@@ -54,7 +54,7 @@
   text-align: center;
   font-size: 12px;
   margin: 0.2rem 0rem;
-  height: 25px;
+  height: 100%;
 }
 
 .movie_img {
@@ -68,8 +68,6 @@
   position: relative;
   width: 100%;
 }
-
-
 
 .title {
   display: flex;
@@ -119,5 +117,11 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .rating {
+    font-size: 10px;
   }
 }

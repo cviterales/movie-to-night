@@ -2,9 +2,38 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import style from "./style.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = (props) => {
+  const navItems = [
+    { path: "/", name: "DISCOVER", type: "" },
+    { path: "/movies", name: "MOVIES", type: "movie" },
+    { path: "/movies", name: "SERIES", type: "tv" },
+  ];
+  const location = useLocation();
+  const renderNavLink = () => {
+    return navItems.map((item, index) => {
+      const type = item.type !== "" ? item.type : "";
+      const isCurrent =
+        location.pathname === item.path && location.state?.type === item.type;
+      return (
+        <li
+          key={index}
+          className={`${style.option_menu} ${
+            isCurrent ? style.active_option_menu : null
+          }`}
+        >
+          <Link
+            to={{ pathname: item.path, state: { type } }}
+            style={{ textDecoration: "none", color: "#fff" }}
+          >
+            <p className={style.button}>{item.name}</p>
+          </Link>
+        </li>
+      );
+    });
+  };
+  //const isCurrent = window.location.pathname === item.path;
   return (
     <header className={style.header}>
       <div className={style.brand}>
@@ -16,52 +45,27 @@ const Header = (props) => {
       </div>
       <div className={style.navigation}>
         <ul className={style.menu}>
-          <li>
-            <Link
-              to={{ pathname: "/" }}
-              style={{ textDecoration: "none", color: "#fff" }}
-            >
-              <p className={style.button}>DISCOVER</p>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={{ pathname: "/movies", state: {type: "movie"} }}
-              style={{ textDecoration: "none", color: "#fff" }}
-            >
-              <p className={style.button}>MOVIES</p>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={{ pathname: "/movies", state: {type: "tv"} }}
-              style={{ textDecoration: "none", color: "#fff" }}
-            >
-              <p className={style.button}>SERIES</p>
-            </Link>
-          </li>
-          <li>
+          {renderNavLink()}
+          <li className={`${style.option_menu}`}>
             <p className={style.button}>SIGN UP</p>
           </li>
-          <li>
+          <li className={`${style.option_menu}`}>
             <p className={[style.button, style.login].join(" ")}>LOGIN</p>
           </li>
         </ul>
-        <div className={style.submenu}>
-          <form className={style.form_search}>
-            <div className={style.search_movie}>
-              <input
-                className={style.search_input}
-                placeholder="Find Movies, series.. "
-                type="text"
-                name="name"
-              />
-              <div>
-                <FontAwesomeIcon icon={faSearch} size="lg" />
-              </div>
+        <form className={style.form_search}>
+          <div className={style.search_movie}>
+            <input
+              className={style.search_input}
+              placeholder="Find Movies, series.. "
+              type="text"
+              name="name"
+            />
+            <div>
+              <FontAwesomeIcon icon={faSearch} size="lg" />
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </header>
   );
