@@ -8,14 +8,16 @@ const Header = (props) => {
   const navItems = [
     { path: "/", name: "DISCOVER", type: "" },
     { path: "/movies", name: "MOVIES", type: "movie" },
-    { path: "/movies", name: "SERIES", type: "tv" },
+    { path: "/series", name: "SERIES", type: "tv" },
   ];
   const location = useLocation();
+  console.log(location)
   const renderNavLink = () => {
     return navItems.map((item, index) => {
       const type = item.type !== "" ? item.type : "";
       const isCurrent =
         location.pathname === item.path && location.state?.type === item.type;
+        console.log(isCurrent, location, item)
       return (
         <li
           key={index}
@@ -37,7 +39,7 @@ const Header = (props) => {
   return (
     <header className={style.header}>
       <div className={style.brand}>
-        <img className={style.brand_logo} src={"/images/movie_7.png"} alt="" />
+        <img className={style.brand_logo} src={"./images/movie_7.png"} alt="" />
         <div className={style.brand_info}>
           <b>Discover</b> what's in theaters, the latest trailers, the best new
           and more..

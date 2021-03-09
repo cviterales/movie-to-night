@@ -25,8 +25,9 @@ function App() {
       <Switch>
         <Layout>
           <Route exact path="/" component={Home} />
-          <Route path={"/movie_details"} component={MovieDetails} />
-          <Route path={"/movies"} component={MoviesGrid} />
+          <Route exact path="/movie_details" component={MovieDetails} />
+          <Route exact path="/movies" component={MoviesGrid} />
+          <Route exact path="/series" component={MoviesGrid} />
         </Layout>
       </Switch>
     </Suspense>
