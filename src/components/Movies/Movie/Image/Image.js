@@ -1,52 +1,93 @@
-import { useRef } from "react";
-import LazyLoad from "react-lazyload";
-import styled, { keyframes } from "styled-components";
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 
-import style from "./style.module.scss";
+const placeHolder =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=";
 
-const loadingAnimation = keyframes`
-  0% {
-    background-color: #fff;
+const ImageC = styled.img`
+  width: 100%;
+  cursor: pointer;
+  // Add a smooth animation on loading
+  @keyframes loaded {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  50% {
-    background-color: #ccc;
+  // I use utilitary classes instead of props to avoid style regenerating
+  &.loaded:not(.has-error) {
+    width: 100%;
+    cursor: pointer;
+    animation: loaded 300ms ease-in-out;
   }
-  100% {
-    background-color: #fff;
+  &.has-error {
+    width: 100%;
+    cursor: pointer;
+    // fallback to placeholder image on error
+    content: url(${placeHolder});
   }
 `;
 
-const Placeholder = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  heigth: 100%;
-  animation: ${loadingAnimation} 1s infinite;
-  -webkit-animation: ${loadingAnimation} 1s infinite;
-  -moz-animation: ${loadingAnimation} 1s infinite;
-  -o-animation: ${loadingAnimation} 1s infinite;
-`;
+const Image = ({ src }) => {
+  const [imageSrc, setImageSrc] = useState(placeHolder);
+  const [imageRef, setImageRef] = useState();
 
-const Image = ({src}) => {
-  const refPlaceholder = useRef();
-
-  const removePlaceholder = () => {
-    refPlaceholder.current.remove();
+  const onLoad = (event) => {
+    event.target.classList.add("loaded");
   };
+
+  const onError = (event) => {
+    event.target.classList.add("has-error");
+  };
+
+  useEffect(() => {
+    let observer;
+    let didCancel = false;
+
+    if (imageRef && imageSrc !== src) {
+      if (IntersectionObserver) {
+        observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (
+                !didCancel &&
+                (entry.intersectionRatio > 0 || entry.isIntersecting)
+              ) {
+                setImageSrc(src);
+                observer.unobserve(imageRef);
+              }
+            });
+          },
+          {
+            threshold: 0.01,
+            rootMargin: "0px",
+          }
+        );
+        observer.observe(imageRef);
+      } else {
+        // Old browsers fallback
+        setImageSrc(src);
+      }
+    }
+    return () => {
+      didCancel = true;
+      // on component cleanup, we remove the listner
+      if (observer && observer.unobserve) {
+        observer.unobserve(imageRef);
+      }
+    };
+  }, [src, imageSrc, imageRef]);
+
   return (
-    <>
-      <Placeholder ref={refPlaceholder} />
-      <img
-        className={style.movie_img}
-        src={src}
-        alt=""
-        onLoad={removePlaceholder}
-        onError={removePlaceholder}
-        loading={LazyLoad}
-      />
-    </>
+    <ImageC
+      ref={setImageRef}
+      src={imageSrc}
+      alt={""}
+      onLoad={onLoad}
+      onError={onError}
+    />
   );
 };
 
