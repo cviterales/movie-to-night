@@ -1,4 +1,4 @@
-## Movie to Night
+## Movie to Night - SPA made in React.
 
 The project allow show a list of movies and series with details for each.<br />
 The options "Sing Up", "Login" and "Search" not working, 
