@@ -6,7 +6,7 @@ import { getData } from "../../../service/dummyData";
 import { Link } from "react-router-dom";
 
 const GridMovies = (props) => {
-  const type = props.location.state ? props.location.state.type : null;
+  const type = props.location.pathname === "/movies" ? "movie" : "tv"
   const [movies, setMovies] = useState([]);
 
   const getMovies = async (type) => {

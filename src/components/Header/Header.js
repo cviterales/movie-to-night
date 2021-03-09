@@ -6,18 +6,15 @@ import { Link, useLocation } from "react-router-dom";
 
 const Header = (props) => {
   const navItems = [
-    { path: "/", name: "DISCOVER", type: "" },
-    { path: "/movies", name: "MOVIES", type: "movie" },
-    { path: "/series", name: "SERIES", type: "tv" },
+    { path: "/", name: "DISCOVER", },
+    { path: "/movies", name: "MOVIES" },
+    { path: "/series", name: "SERIES" },
   ];
   const location = useLocation();
-  console.log(location)
   const renderNavLink = () => {
     return navItems.map((item, index) => {
-      const type = item.type !== "" ? item.type : "";
       const isCurrent =
         location.pathname === item.path && location.state?.type === item.type;
-        console.log(isCurrent, location, item)
       return (
         <li
           key={index}
@@ -26,7 +23,7 @@ const Header = (props) => {
           }`}
         >
           <Link
-            to={{ pathname: item.path, state: { type } }}
+            to={{ pathname: item.path}}
             style={{ textDecoration: "none", color: "#fff" }}
           >
             <p className={style.button}>{item.name}</p>

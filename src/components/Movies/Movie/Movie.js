@@ -1,12 +1,15 @@
 import React from "react";
 import StarsRating from "../StarsRating/StarsRating";
 import style from "./style.module.scss";
+import Image from './Image/Image'
 
 const Movie = (props) => {
   return (
     <>
       <div key={props.keyIndex} className={style.movie}>
-        <img className={style.movie_img} src={props.poster} alt="" />
+          <Image
+            src={props.poster}
+          />
         {props.hover_stars ? (
           <>
             <div className={style.description}></div>
