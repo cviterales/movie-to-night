@@ -1,3 +1,12 @@
+## Movie to Night
+
+The project allow show a list of movies and series with details for each.<br />
+The options "Sing Up", "Login" and "Search" not working, 
+they are only part of the design.<br />
+The Movide Data Base, its stored in src/serivce/dummyData.js. 
+You can use real data obtaining your API key from https://www.themoviedb.org/
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
