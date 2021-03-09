@@ -7,25 +7,21 @@ const placeHolder =
 const ImageC = styled.img`
   width: 100%;
   cursor: pointer;
-  // Add a smooth animation on loading
   @keyframes loaded {
     0% {
-      opacity: 0.1;
+      background-color: black
+    }
+    50% {
+      background-color: #fff
     }
     100% {
-      opacity: 1;
+      background-color: black
     }
   }
-  // I use utilitary classes instead of props to avoid style regenerating
   &.loaded:not(.has-error) {
-    width: 100%;
-    cursor: pointer;
-    animation: loaded 300ms ease-in-out;
+    animation: loaded 1s infinite;
   }
   &.has-error {
-    width: 100%;
-    cursor: pointer;
-    // fallback to placeholder image on error
     content: url(${placeHolder});
   }
 `;
