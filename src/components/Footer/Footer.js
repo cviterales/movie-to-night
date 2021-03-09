@@ -22,6 +22,7 @@ const Footer = () => {
           <a href="mailto: cviterales@gmail.com" target="_blank"  aria-label="Gmail" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faEnvelope} size="lg" />
           </a>
+          <img className={style.img} src="./logo192.png" alt=""/>
         </div>
     </footer>
   );
