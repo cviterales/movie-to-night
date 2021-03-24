@@ -2,18 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 2rem 0rem;
+  margin-top: 2rem;
   &__border {
     border-top: 1px solid #fff;
-    width: 15%;
-    margin: 2rem 0rem;
   }
   &__submenu_social {
     display: flex;
     color: #fff;
     justify-content: flex-end;
     align-items: center;
-    margin: 1rem 0rem;
+    padding: 1rem;
     width: 25%;
     & > a {
       color: #fff;
