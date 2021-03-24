@@ -1,3 +1,4 @@
+@import "../../../styles/mixins.scss";
 .movie {
   list-style: none;
   width: 100%;
@@ -45,6 +46,9 @@
     display: flex;
     justify-content: space-around;
     font-size: 12px;
+    @include responsive {
+      font-size: 10px;
+    }
   }
 }
 
@@ -55,11 +59,5 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  &__rating {
-    font-size: 10px;
   }
 }

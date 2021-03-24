@@ -1,10 +1,8 @@
+@import "../../styles/mixins.scss";
 .content_movies {
   display: flex;
   color: #fff;
-}
-
-@media screen and (max-width: 1000px){
-  .content_movies {
+  @include responsive {
     flex-direction: column-reverse;
   }
 }

@@ -1,7 +1,12 @@
+@import "../../styles/mixins.scss";
+
 .view__movies {
   flex: 1;
   &__details {
     width: 80%;
+    @include responsive {
+      width: 100%;
+    }
     &__content {
       display: flex;
       padding: 2rem 1rem;
@@ -29,13 +34,10 @@
         list-style: none;
         width: 140px;
         height: 220px;
+        @include responsive {
+          margin: 0rem 0.2rem;
+        }
       }
     }
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  &__details {
-    width: 100%;
   }
 }
