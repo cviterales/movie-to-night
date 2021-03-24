@@ -1,0 +1,41 @@
+.view__movies {
+  flex: 1;
+  &__details {
+    width: 80%;
+    &__content {
+      display: flex;
+      padding: 2rem 1rem;
+      justify-content: space-between;
+      & > p {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 25px;
+      }
+      &__title {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: rgb(255, 196, 0);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      &__movie {
+        margin: 0rem 0.5rem;
+        list-style: none;
+        width: 140px;
+        height: 220px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  &__details {
+    width: 100%;
+  }
+}

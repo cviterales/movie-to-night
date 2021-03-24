@@ -8,9 +8,8 @@
 body {
   background-color: #080f21;
   max-width: 1900px;
-  width: 90vw;
+  width: 100%;
   font-family: "Roboto", "Roboto Bold";
-  margin: 0 auto;
   &::-webkit-scrollbar {
     width: 8px;
   }
@@ -30,7 +29,7 @@ body {
   &::-webkit-scrollbar-thumb:hover {
     background:rgb(255, 196, 0);
   }
-  min-width: 400px;
+  min-width: 500px;
 }
 
 @font-face {

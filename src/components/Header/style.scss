@@ -1,0 +1,113 @@
+%button {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  width: 7rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  text-align: center;
+  color: #fff;
+  &__brand {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    &__logo {
+      width: 50%;
+      height: 37%;
+      min-width: 380px;
+    }
+    &__info {
+      text-align: left;
+      width: 50%;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+  }
+  &__navigation {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    &__menu {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-around;
+      border-bottom: 1px solid rgb(65, 65, 65);
+      &__option {
+        display: flex;
+        font-size: 18px;
+        color: #fff;
+        height: 100%;
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+        list-style: none;
+        height: 100px;
+        &__button {
+          @extend %button;
+          &__login {
+            @extend %button;
+            background-color: rgb(255, 196, 0);
+            color: #0f182e;
+          }
+          &--active {
+            border-bottom: 1px solid #fff;
+          }
+          &--hover:hover {
+            border-bottom: 1px solid #fff;
+          }
+        }
+      }
+    }
+  }
+  &__form {
+    padding: 1.9rem;
+    display: flex;
+    justify-content: flex-end;
+    &__search {
+      padding: 0.6rem;
+      border: 1px solid #fff;
+      text-align: left;
+      width: 250px;
+      display: flex;
+    }
+    &__input {
+      background: #080f21;
+      opacity: 1;
+      border: 0;
+      width: 90%;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    &__brand {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      &__info {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+    &__navigation {
+      &__menu {
+        flex-wrap: wrap;
+      }
+    }
+    &__form {
+      justify-content: center;
+    }
+  }
+}

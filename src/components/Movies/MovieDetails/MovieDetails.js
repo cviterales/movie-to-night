@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./style.module.scss";
+import "./style.scss";
 import StarsRating from "../StarsRating/StarsRating";
 
 import moment from "moment";
@@ -13,42 +13,42 @@ const MovieDetails = (props) => {
 
   if (movie) {
     renderDetails = (
-      <div className={style.content_details}>
-      <div className={style.content_image_details}>
+      <div className="content">
+      <div className="content__image">
         {loaded && (
           <>
-            <div className={style.img_background}>
-              <div className={style.img_details}>
+            <div className="content__image__background">
+              <div className="content__image__background__details">
                 <img
-                  className={style.img_front}
+                  className="content__image__background__details__img"
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                  alt=""
+                  alt={movie.title}
                 />
               </div>
-              <div className={style.wrapper_details}>
-                <p className={style.title_details}>
+              <div className="content__image__background__movie">
+                <p>
                   {movie.title ? movie.title : movie.original_name} ({moment(movie.release_date).format("YYYY")})
                 </p>
-                <div className={style.movie_content_details}>
-                  <p className={style.info_details}>
+                <div className="content__image__background__movie__info">
+                  <p>
                     {movie.adult ? "+18" : "+13"}
                   </p>
-                  <p className={style.info_details}>|</p>
-                  <p className={style.info_details}>
+                  <p>|</p>
+                  <p>
                     {movie.original_language.toUpperCase()}
                   </p>
-                  <p className={style.info_details}>|</p>
-                  <div className={style.star_rating}>
+                  <p>|</p>
+                  <div className="content__image__background__movie__info__star">
                     <StarsRating rating={movie.vote_average} />
                   </div>
                 </div>
-                <div className={style.movie_details}>
-                  <div className={style.details}>
+                <div className="content__image__background__movie__details">
+                  <div className="content__image__background__movie__details__first">
                     <p>Votes: {movie.vote_average}</p>
                     <p>Amount Votes: {movie.vote_count}</p>
                   </div>
                   <div
-                    className={style.content_description}
+                    className="content__image__background__movie__details__second"
                   >
                     <p>{movie.overview}</p>
                   </div>
@@ -64,15 +64,15 @@ const MovieDetails = (props) => {
           </>
         )}
         <img
-          className={style.img}
+          className="content__image__img"
           src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
-          alt=""
+          alt={movie.title}
           onLoad={() => {
             setLoaded(true);
           }}
         />
       </div>
-      {loaded && <div className={style.content_movie_details}></div>}
+{/*       {loaded && <div className={style.content_movie_details}></div>} */}
     </div>
     )
   }

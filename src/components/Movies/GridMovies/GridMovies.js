@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Movie from "../Movie/Movie";
-import style from "./style.module.scss";
+import "./style.scss";
 
 import { getData } from "../../../service/dummyData";
 import { Link } from "react-router-dom";
@@ -21,7 +21,7 @@ const GridMovies = (props) => {
   const renderMovies = (movies) => {
     return movies.map((movie) => {
       return (
-        <div className={style.movie} key={movie.id}>
+        <div className="grid_movie" key={movie.id}>
           <Link
             to={{ pathname: "/movie_details", state: { movie: movie } }}
             style={{ textDecoration: "none", color: "#fff" }}
@@ -40,7 +40,7 @@ const GridMovies = (props) => {
     });
   };
   return (
-    <div className={style.grid}>
+    <div className="grid">
       {type ? (
         renderMovies(movies)
       ) : (

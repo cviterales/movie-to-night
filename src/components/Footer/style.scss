@@ -1,0 +1,47 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  &__border {
+    border-top: 1px solid #fff;
+    width: 15%;
+    margin-top: 2rem;
+  }
+  &__submenu_social {
+    display: flex;
+    color: #fff;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1rem 0rem;
+    width: 50%;
+    & > a {
+      color: #fff;
+      padding: 0rem 1rem;
+    }
+  }
+  &__img {
+    width: 25px;
+    margin: 0rem 1rem;
+    animation: Rotate 4s linear infinite;
+  }
+}
+
+
+
+@-moz-keyframes Rotate {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes Rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes Rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+

@@ -1,6 +1,6 @@
 import React from "react";
 import Movie from "./Movie/Movie";
-import style from "./style.module.scss";
+import "./style.scss";
 import { Link } from "react-router-dom";
 const Movies = (props) => {
 
@@ -11,7 +11,7 @@ const Movies = (props) => {
       .slice(minIndex, maxIndex)
       .map((movie, index) => {
         return (
-          <li key={index} className={style.movie}>
+          <li key={index} className="view__movies__details__list__movie">
             <Link to={{ pathname: "/movie_details", state: { movie: movie } }} style={{textDecoration: 'none', color: '#fff'}}>
               <Movie
                 keyIndex={index}
@@ -29,30 +29,30 @@ const Movies = (props) => {
   };
 
   return (
-    <div className={style.view_movies}>
-      <div className={style.details_movies}>
-        <div className={style.title_list}>
-          <p className={style.title}>In Theathers</p>
+    <div className="view__movies">
+      <div className="view__movies__details">
+        <div className="view__movies__details__content">
+          <p>In Theathers</p>
           <Link
               to={{ pathname: "/movies", state: {type: "movie"} }}
               style={{ textDecoration: "none", color: "#fff" }}
             >
-          <p className={style.details}>See more +</p>
+          <p className="view__movies__details__content__title">See more +</p>
           </Link>
         </div>
-        <ul className={style.list_movies}>
+        <ul className="view__movies__details__list">
           {listMoviesHandler(0, 4, props.movies)}
         </ul>
-        <div className={style.title_list}>
-          <p className={style.title}>Coming Soon</p>
+        <div className="view__movies__details__content">
+          <p>Coming Soon</p>
           <Link
               to={{ pathname: "/movies", state: {type: "tv"} }}
               style={{ textDecoration: "none", color: "#fff" }}
             >
-          <p className={style.details}>See more +</p>
+          <p className="view__movies__details__content__title">See more +</p>
           </Link>
         </div>
-        <ul className={style.list_movies}>
+        <ul className="view__movies__details__list">
           {listMoviesHandler(4, 8, props.movies)}
         </ul>
       </div>

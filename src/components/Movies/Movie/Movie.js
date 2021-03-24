@@ -1,19 +1,19 @@
 import React from "react";
 import StarsRating from "../StarsRating/StarsRating";
-import style from "./style.module.scss";
+import "./style.scss";
 import Image from './Image/Image'
 
 const Movie = (props) => {
   return (
     <>
-      <div key={props.keyIndex} className={style.movie}>
+      <div key={props.keyIndex} className="movie">
           <Image
             src={props.poster}
           />
         {props.hover_stars ? (
           <>
-            <div className={style.description}></div>
-            <div className={style.info_movie}>
+            <div className="movie__description"></div>
+            <div className="movie__info">
               <StarsRating rating={props.imdbRating} />
             </div>
           </>
@@ -22,7 +22,7 @@ const Movie = (props) => {
           <>
             {" "}
             <p>{props.title}.</p>
-            <div className={style.rating}>
+            <div className="movie__rating">
               <StarsRating rating={props.imdbRating} />
             </div>{" "}
           </>

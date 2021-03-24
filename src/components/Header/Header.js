@@ -1,12 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import style from "./style.module.scss";
+//import style from "./style.module.scss";
+import "./style.scss";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = (props) => {
   const navItems = [
-    { path: "/", name: "DISCOVER", },
+    { path: "/", name: "DISCOVER" },
     { path: "/movies", name: "MOVIES" },
     { path: "/series", name: "SERIES" },
   ];
@@ -15,18 +16,17 @@ const Header = (props) => {
     return navItems.map((item, index) => {
       const isCurrent =
         location.pathname === item.path && location.state?.type === item.type;
+      const classes = isCurrent ? "header__navigation__menu__option header__navigation__menu__option__button--active" : "header__navigation__menu__option header__navigation__menu__option__button--hover";
       return (
         <li
           key={index}
-          className={`${style.option_menu} ${
-            isCurrent ? style.active_option_menu : null
-          }`}
+          className={classes}
         >
           <Link
-            to={{ pathname: item.path}}
+            to={{ pathname: item.path }}
             style={{ textDecoration: "none", color: "#fff" }}
           >
-            <p className={style.button}>{item.name}</p>
+            <p className="header__navigation__menu__option__button">{item.name}</p>
           </Link>
         </li>
       );
@@ -34,28 +34,34 @@ const Header = (props) => {
   };
 
   return (
-    <header className={style.header}>
-      <div className={style.brand}>
-        <img className={style.brand_logo} src={"./images/movie_7.png"} alt="" />
-        <div className={style.brand_info}>
+    <header className="header">
+      <div className="header__brand">
+        <img
+          className="header__brand__logo"
+          src={"./images/movie_7.png"}
+          alt="movie-to-night"
+        />
+        <div className="header__brand__info">
           <b>Discover</b> what's in theaters, the latest trailers, the best new
           and more..
         </div>
       </div>
-      <div className={style.navigation}>
-        <ul className={style.menu}>
+      <div className="header__navigation">
+        <ul className="header__navigation__menu">
           {renderNavLink()}
-          <li className={`${style.option_menu}`}>
-            <p className={style.button}>SIGN UP</p>
+          <li className="header__navigation__menu__option">
+            <p className="header__navigation__menu__option__button">SIGN UP</p>
           </li>
-          <li className={`${style.option_menu}`}>
-            <p className={[style.button, style.login].join(" ")}>LOGIN</p>
+          <li className="header__navigation__menu__option">
+            <p className="header__navigation__menu__option__button__login">
+              LOGIN
+            </p>
           </li>
         </ul>
-        <form className={style.form_search}>
-          <div className={style.search_movie}>
+        <form className="header__form">
+          <div className="header__form__search">
             <input
-              className={style.search_input}
+              className="header__form__search__input"
               placeholder="Find Movies, series.. "
               type="text"
               name="name"

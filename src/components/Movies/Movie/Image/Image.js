@@ -80,7 +80,7 @@ const Image = ({ src }) => {
     <ImageC
       ref={setImageRef}
       src={imageSrc}
-      alt={""}
+      alt={"loading image"}
       onLoad={onLoad}
       onError={onError}
     />

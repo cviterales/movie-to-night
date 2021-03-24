@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./style.module.scss";
+import "./style.scss";
 import PropTypes from "prop-types";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,21 +19,21 @@ const StarsRating = ({ rating }) => {
 
   const renderStars = () => {
     for (let i = 0; i < Math.floor(num); i++) {
-      starsArr.push(<FontAwesomeIcon className={styles.content_star} icon={faStar} color="rgb(255, 196, 0);" size="sm" key={Math.random()} />);
+      starsArr.push(<FontAwesomeIcon className="rating__star" icon={faStar} color="rgb(255, 196, 0);" size="sm" key={Math.random()} />);
     }
     if (num - Math.floor(num) !== 0) {
-      starsArr.push(<FontAwesomeIcon className={styles.content_star} icon={faStarHalfAlt} color="rgb(255, 196, 0);" size="sm" key={Math.random()} />);
+      starsArr.push(<FontAwesomeIcon className="rating__star" icon={faStarHalfAlt} color="rgb(255, 196, 0);" size="sm" key={Math.random()} />);
     }
     if (num < 5) {
       for (let i = starsArr.length; i < maxRating; i++) {
-        starsArr.push(<FontAwesomeIcon className={styles.content_star} icon={emptyStar} color="rgb(255, 196, 0);" size="sm" key={Math.random()} />);
+        starsArr.push(<FontAwesomeIcon className="rating__star" icon={emptyStar} color="rgb(255, 196, 0);" size="sm" key={Math.random()} />);
       }
     }
   };
 
   renderStars();
   return (
-    <div className={styles.wrapper_stars} key={Math.random()}>
+    <div className="rating" key={Math.random()}>
       {starsArr}
       <b>{rating.toFixed(1)}</b>
     </div>
