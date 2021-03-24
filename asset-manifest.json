@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/movie-to-night/static/css/main.d49623c2.chunk.css",
+    "main.css": "/movie-to-night/static/css/main.da4823df.chunk.css",
     "main.js": "/movie-to-night/static/js/main.63384b49.chunk.js",
     "main.js.map": "/movie-to-night/static/js/main.63384b49.chunk.js.map",
     "runtime-main.js": "/movie-to-night/static/js/runtime-main.8f0c62a1.js",
@@ -18,7 +18,7 @@
     "index.html": "/movie-to-night/index.html",
     "static/css/3.e2f6f057.chunk.css.map": "/movie-to-night/static/css/3.e2f6f057.chunk.css.map",
     "static/css/4.12c8e6c1.chunk.css.map": "/movie-to-night/static/css/4.12c8e6c1.chunk.css.map",
-    "static/css/main.d49623c2.chunk.css.map": "/movie-to-night/static/css/main.d49623c2.chunk.css.map",
+    "static/css/main.da4823df.chunk.css.map": "/movie-to-night/static/css/main.da4823df.chunk.css.map",
     "static/js/2.d3e5d8e4.chunk.js.LICENSE.txt": "/movie-to-night/static/js/2.d3e5d8e4.chunk.js.LICENSE.txt",
     "static/js/5.cb37f8b1.chunk.js.LICENSE.txt": "/movie-to-night/static/js/5.cb37f8b1.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/movie-to-night/static/media/Roboto-Regular.f25bd059.ttf"
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.8f0c62a1.js",
     "static/js/2.d3e5d8e4.chunk.js",
-    "static/css/main.d49623c2.chunk.css",
+    "static/css/main.da4823df.chunk.css",
     "static/js/main.63384b49.chunk.js"
   ]
 }
