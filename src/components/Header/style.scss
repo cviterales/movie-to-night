@@ -65,24 +65,24 @@
         }
       }
     }
-  }
-  &__form {
-    padding: 1.9rem;
-    display: flex;
-    justify-content: flex-end;
-    &__search {
-      padding: 0.6rem;
-      border: 1px solid #fff;
-      text-align: left;
-      width: 250px;
+    &__form {
+      padding: 1.9rem;
       display: flex;
-    }
-    &__input {
-      background: #080f21;
-      opacity: 1;
-      border: 0;
-      width: 90%;
-      color: #fff;
+      justify-content: flex-end;
+      &__search {
+        padding: 0.6rem;
+        border: 1px solid #fff;
+        text-align: left;
+        width: 250px;
+        display: flex;
+        &__input {
+          background: #080f21;
+          opacity: 1;
+          border: 0;
+          width: 90%;
+          color: #fff;
+        }
+      }
     }
   }
 }

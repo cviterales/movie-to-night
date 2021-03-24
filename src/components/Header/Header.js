@@ -58,10 +58,10 @@ const Header = (props) => {
             </p>
           </li>
         </ul>
-        <form className="header__form">
-          <div className="header__form__search">
+        <form className="header__navigation__form">
+          <div className="header__navigation__form__search">
             <input
-              className="header__form__search__input"
+              className="header__navigation__form__search__input"
               placeholder="Find Movies, series.. "
               type="text"
               name="name"
