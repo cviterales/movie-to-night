@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/Movies/GridMovies/style.scss"],"names":[],"mappings":"AAAA,MACE,YAAa,CAEb,oCAAsC,CACtC,cAAgB,CAChB,mBAHA,UAIa","file":"3.e2f6f057.chunk.css","sourcesContent":[".grid {\r\n  display: grid;\r\n  width: 100%;\r\n  grid-template-columns: repeat(4, auto);\r\n  grid-gap: 0.5rem;\r\n  &__movie {\r\n    width: 100%;\r\n  }\r\n}"]}
