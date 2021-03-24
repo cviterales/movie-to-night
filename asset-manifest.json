@@ -1,32 +1,32 @@
 {
   "files": {
-    "main.css": "/movie-to-night/static/css/main.3994b782.chunk.css",
-    "main.js": "/movie-to-night/static/js/main.73dc1105.chunk.js",
-    "main.js.map": "/movie-to-night/static/js/main.73dc1105.chunk.js.map",
-    "runtime-main.js": "/movie-to-night/static/js/runtime-main.b055b66f.js",
-    "runtime-main.js.map": "/movie-to-night/static/js/runtime-main.b055b66f.js.map",
+    "main.css": "/movie-to-night/static/css/main.60d51ccb.chunk.css",
+    "main.js": "/movie-to-night/static/js/main.b3d15b85.chunk.js",
+    "main.js.map": "/movie-to-night/static/js/main.b3d15b85.chunk.js.map",
+    "runtime-main.js": "/movie-to-night/static/js/runtime-main.e7648a8e.js",
+    "runtime-main.js.map": "/movie-to-night/static/js/runtime-main.e7648a8e.js.map",
     "static/js/2.a923ef59.chunk.js": "/movie-to-night/static/js/2.a923ef59.chunk.js",
     "static/js/2.a923ef59.chunk.js.map": "/movie-to-night/static/js/2.a923ef59.chunk.js.map",
     "static/css/3.e2f6f057.chunk.css": "/movie-to-night/static/css/3.e2f6f057.chunk.css",
     "static/js/3.b8459147.chunk.js": "/movie-to-night/static/js/3.b8459147.chunk.js",
     "static/js/3.b8459147.chunk.js.map": "/movie-to-night/static/js/3.b8459147.chunk.js.map",
-    "static/css/4.cbfeaa8e.chunk.css": "/movie-to-night/static/css/4.cbfeaa8e.chunk.css",
+    "static/css/4.1daffae1.chunk.css": "/movie-to-night/static/css/4.1daffae1.chunk.css",
     "static/js/4.72b4d7a1.chunk.js": "/movie-to-night/static/js/4.72b4d7a1.chunk.js",
     "static/js/4.72b4d7a1.chunk.js.map": "/movie-to-night/static/js/4.72b4d7a1.chunk.js.map",
     "static/js/5.a50c7182.chunk.js": "/movie-to-night/static/js/5.a50c7182.chunk.js",
     "static/js/5.a50c7182.chunk.js.map": "/movie-to-night/static/js/5.a50c7182.chunk.js.map",
     "index.html": "/movie-to-night/index.html",
     "static/css/3.e2f6f057.chunk.css.map": "/movie-to-night/static/css/3.e2f6f057.chunk.css.map",
-    "static/css/4.cbfeaa8e.chunk.css.map": "/movie-to-night/static/css/4.cbfeaa8e.chunk.css.map",
-    "static/css/main.3994b782.chunk.css.map": "/movie-to-night/static/css/main.3994b782.chunk.css.map",
+    "static/css/4.1daffae1.chunk.css.map": "/movie-to-night/static/css/4.1daffae1.chunk.css.map",
+    "static/css/main.60d51ccb.chunk.css.map": "/movie-to-night/static/css/main.60d51ccb.chunk.css.map",
     "static/js/2.a923ef59.chunk.js.LICENSE.txt": "/movie-to-night/static/js/2.a923ef59.chunk.js.LICENSE.txt",
     "static/js/5.a50c7182.chunk.js.LICENSE.txt": "/movie-to-night/static/js/5.a50c7182.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/movie-to-night/static/media/Roboto-Regular.f25bd059.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.b055b66f.js",
+    "static/js/runtime-main.e7648a8e.js",
     "static/js/2.a923ef59.chunk.js",
-    "static/css/main.3994b782.chunk.css",
-    "static/js/main.73dc1105.chunk.js"
+    "static/css/main.60d51ccb.chunk.css",
+    "static/js/main.b3d15b85.chunk.js"
   ]
 }
