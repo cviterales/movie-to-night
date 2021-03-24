@@ -1,93 +1,105 @@
+@import "../../../styles/mixins.scss";
+
 .content {
   display: flex;
   width: 70%;
   margin: 0 auto;
+  position: relative;
 
-  &__image {
-    position: relative;
-
-    &__background {
-      width: 100%;
-      text-align: center;
-      color: #fff;
+  &__background {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    z-index: 1;
+    margin: 1rem 0rem;
+    @include responsive {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__details {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
       z-index: 1;
-      margin: 1rem 0rem;
+      animation: fadeImage 2s forwards;
+      -webkit-animation: fadeImage 2s forwards;
+      -o-animation: fadeImage 2s forwards;
+      -moz-animation: fadeImage 2s forwards;
 
-      &__details {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        z-index: 1;
-        animation: fadeImage 2s forwards;
-        -webkit-animation: fadeImage 2s forwards;
-        -o-animation: fadeImage 2s forwards;
-        -moz-animation: fadeImage 2s forwards;
-
-        &__img {
-          width: 70%;
-        }
+      &__img {
+        width: 70%;
       }
-
-      &__movie {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 50%;
-        z-index: 1;
+    }
+    &__movie {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      z-index: 1;
+      & > p {
+        font-size: 40px;
+        font-weight: 900;
+      }
+      @include responsive {
+        width: 100%;
+        margin-top: 1rem;
         & > p {
-          font-size: 40px;
-          font-weight: 900;
-        }
-
-        &__info {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 0.2rem 0rem;
-          & > p {
-            margin: 0rem 1rem;
-          }
-          &__star {
-            display: flex;
-            font-size: 14px;
-            color: rgb(255, 196, 0);
-          }
-        }
-
-        &__details {
-          display: flex;
-          flex-direction: column;
-          width: 90%;
-          margin: 0 auto;
-          align-items: center;
-          letter-spacing: 1px;
-
-          &__first {
-            display: flex;
-            justify-content: space-between;
-            width: 50%;
-            & > p {
-              margin: 1rem 0rem;
-            }
-          }
-          &__second {
-            font-size: 18px;
-            font-family: "Roboto";
-            margin: 1rem 0rem;
-          }
+          font-size: 20px;
         }
       }
     }
-    &__img {
-      width: 100%;
-      opacity: 0.2;
-      filter: blur(8px);
-      position: absolute;
-      top: 0px;
-      left: 0px;
+  }
+  &__img {
+    width: 100%;
+    opacity: 0.2;
+    filter: blur(8px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2rem 0rem;
+  & > p {
+    margin: 0rem 1rem;
+  }
+  @include responsive {
+    font-size: 12px;
+  }
+  &__star {
+    display: flex;
+    font-size: 14px;
+    color: rgb(255, 196, 0);
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  letter-spacing: 1px;
+
+  &__first {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    & > p {
+      margin: 1rem 0rem;
     }
+  }
+  &__second {
+    font-size: 18px;
+    font-family: "Roboto";
+    margin: 1rem 0rem;
   }
 }
 
@@ -97,32 +109,5 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .content {
-    &__image {
-      &__background {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        &__movie {
-          width: 100%;
-          margin-top: 1rem;
-          & > p {
-            font-size: 20px;
-          }
-          &__info {
-            font-size: 12px;
-          }
-          &__details {
-            &__info {
-              font-size: 14px;
-            }
-          }
-        }
-      }
-    }
   }
 }
