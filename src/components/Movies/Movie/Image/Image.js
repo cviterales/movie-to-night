@@ -25,9 +25,16 @@ const ImageC = styled.img`
     width: ${(props) => props.width}px;
     content: url(${placeHolder});
   }
+  @media screen and (max-width: 1024px) {
+    width: ${(props) => props.mobileWidth}px;
+    &.has-error {
+      width: ${(props) => props.mobileWidth}px;
+      content: url(${placeHolder});
+    }
+  }
 `;
 
-const Image = ({ src, width, height }) => {
+const Image = ({ src, width, mobileWidth }) => {
   const [imageSrc, setImageSrc] = useState(placeHolder);
   const [imageRef, setImageRef] = useState();
   const onLoad = (event) => {
@@ -81,7 +88,7 @@ const Image = ({ src, width, height }) => {
       onLoad={onLoad}
       onError={onError}
       width={width}
-      height={height}
+      mobileWidth={mobileWidth}
     />
   );
 };

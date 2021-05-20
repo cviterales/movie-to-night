@@ -20,7 +20,8 @@ const Movies = (props) => {
                 imdbRating={movie.vote_average}
                 stars={true}  
                 hover_stars={false}
-                width={140}           
+                width={140}  
+                mobileWidth={100}         
               />
             </Link>
           </li>

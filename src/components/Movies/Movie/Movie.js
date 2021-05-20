@@ -10,7 +10,7 @@ const Movie = (props) => {
       <div key={props.keyIndex} className="movie">
           <Image
             width={props.width}
-            height={props.height}
+            mobileWidth={props.mobileWidth}
             src={props.poster}
           />
         {props.hover_stars ? (

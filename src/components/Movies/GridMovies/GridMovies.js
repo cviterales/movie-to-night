@@ -34,7 +34,7 @@ const GridMovies = (props) => {
               stars={false}
               hover_stars={true}
               width={420}
-              height={650}
+              mobileWidth={100}
             />
           </Link>
         </div>
