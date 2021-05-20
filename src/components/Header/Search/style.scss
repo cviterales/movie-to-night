@@ -1,4 +1,4 @@
-@import "../../../styles/mixins.scss";
+@use "../../../styles/mixins.scss" as *;
 
 .form {
   padding: 1.9rem;

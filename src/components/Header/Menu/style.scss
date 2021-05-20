@@ -1,5 +1,5 @@
-@import "../../../styles/utils.scss";
-@import "../../../styles/mixins.scss";
+@use "../../../styles/utils.scss";
+@use "../../../styles/mixins.scss" as *;
 
 .menu {
   display: flex;
