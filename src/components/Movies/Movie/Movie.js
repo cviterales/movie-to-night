@@ -4,10 +4,13 @@ import "./style.scss";
 import Image from './Image/Image'
 
 const Movie = (props) => {
+  console.log(props)
   return (
     <>
       <div key={props.keyIndex} className="movie">
           <Image
+            width={props.width}
+            height={props.height}
             src={props.poster}
           />
         {props.hover_stars ? (

@@ -19,7 +19,8 @@ const Movies = (props) => {
                 title={movie.title}
                 imdbRating={movie.vote_average}
                 stars={true}  
-                hover_stars={false}            
+                hover_stars={false}
+                width={140}           
               />
             </Link>
           </li>

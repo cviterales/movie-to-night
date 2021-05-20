@@ -33,6 +33,8 @@ const GridMovies = (props) => {
               imdbRating={movie.vote_average}
               stars={false}
               hover_stars={true}
+              width={420}
+              height={650}
             />
           </Link>
         </div>
