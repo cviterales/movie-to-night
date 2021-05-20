@@ -36,7 +36,7 @@
   &__img {
     width: 950px;
     @include responsive {
-      width: 420px;
+      width: 450px;
     }
     animation: fadeImage 2s forwards;
     -webkit-animation: fadeImage 2s forwards;
