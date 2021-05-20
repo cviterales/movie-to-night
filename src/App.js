@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
-//Components
 import Layout from "./containers/Layout/Layout";
 import Home from "./containers/Home/Home";
 import Spinner from "./components/Spinner/Spinner";

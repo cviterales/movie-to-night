@@ -18,7 +18,6 @@ const Home = () => {
 
   return (
     <div className="content_movies">
-      <h1>{""}</h1>
       <Movies movies={movies} />
       <BestMovie movies={movies}/>
     </div>

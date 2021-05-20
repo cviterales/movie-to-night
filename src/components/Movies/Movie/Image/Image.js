@@ -6,6 +6,7 @@ const placeHolder =
 
 const ImageC = styled.img`
   width: ${(props) => props.width}px;
+  height: auto;
   cursor: pointer;
   @keyframes loaded {
     0% {
@@ -23,10 +24,12 @@ const ImageC = styled.img`
   }
   &.has-error {
     width: ${(props) => props.width}px;
+    height: auto;
     content: url(${placeHolder});
   }
   @media screen and (max-width: 1024px) {
     width: ${(props) => props.mobileWidth}px;
+    height: auto;
     &.has-error {
       width: ${(props) => props.mobileWidth}px;
       content: url(${placeHolder});
@@ -67,13 +70,11 @@ const Image = ({ src, width, mobileWidth }) => {
         );
         observer.observe(imageRef);
       } else {
-        // Old browsers fallback
         setImageSrc(src);
       }
     }
     return () => {
       didCancel = true;
-      // on component cleanup, we remove the listner
       if (observer && observer.unobserve) {
         observer.unobserve(imageRef);
       }
